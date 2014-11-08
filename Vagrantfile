@@ -9,7 +9,7 @@ apt-get update
 apt-get install -y python-software-properties
 add-apt-repository ppa:ondrej/php5
 apt-get update
-apt-get install -y php5 php5-mcrypt
+apt-get install -y php5 php5-curl php5-mcrypt
 cd /vagrant
 php artisan serve -q --host=0.0.0.0 &
 SCRIPT

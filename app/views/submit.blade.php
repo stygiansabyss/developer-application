@@ -7,7 +7,20 @@
 </head>
 <body>
 	<div class="container">
-		{{ Form::open([ 'route' => 'app.submit', 'method' => 'post', 'role' => 'form' ]) }}
+
+		<div class="page-header">
+			<h1>Rooster Teeth <small>Developer Application</small></h1>
+		</div>
+	
+		@if (isset($info))
+			<div role="alert" class="alert alert-info">{{ $info }}</div>
+		@endif
+
+		@if (isset($error))
+			<div role="alert" class="alert alert-danger">{{ $error }}</div>
+		@endif
+
+		{{ Form::open([ 'route' => 'app.submit', 'method' => 'post', 'role' => 'form', 'files' => true ]) }}
 
 		<div class="form-group">
 			{{ Form::label('name', 'Name') }}

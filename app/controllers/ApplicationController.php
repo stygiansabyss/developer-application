@@ -14,12 +14,13 @@ class ApplicationController extends BaseController {
 
 	public function postSubmit()
 	{
-		$data = Input::input();
-		if (Input::hasFile('resume')) {
-			$data['resume'] = '@'.Input::file('resume')->getPathname();
-		}
+		$data = array_merge(
+			Input::input(), 
+			$this->fileDetails('cover_letter'), 
+			$this->fileDetails('resume')
+			);
 
-		$client = new Guzzle\Http\Client('http://localhost:4567');
+		$client = new Guzzle\Http\Client(Config::get('remote.submit-domain'));
 		$request = $client->post('submit', [], $data);
 		$response = $request->send();
 		if ($response->isSuccessful()) {
@@ -28,6 +29,20 @@ class ApplicationController extends BaseController {
 		else {
 			return Redirect::route('app.submit')->withError('Your submission failed - try again, good luck.');
 		}
+	}
+
+	/* PRIVATE */
+
+	private function fileDetails($name)
+	{
+		if (Input::hasFile($name)) {
+			$file = Input::file($name);
+			return [
+				$name => '@'.$file->getPathname(),
+				$name.'_filename' => $file->getClientOriginalName()
+				];
+		}
+		return [];
 	}
 
 }

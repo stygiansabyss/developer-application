@@ -22,15 +22,35 @@
 
 		{{ Form::open([ 'route' => 'app.submit', 'method' => 'post', 'role' => 'form', 'files' => true ]) }}
 
-		<div class="form-group">
-			{{ Form::label('name', 'Name') }}
-			{{ Form::text('name', null, [ 'class' => 'form-control' ]) }}
-		</div>
+		<fieldset>
+			<legend>Personal Details</legend>
 
-		<div class="form-group">
-			{{ Form::label('resume', 'Resume') }}
-			{{ Form::file('resume', null, [ 'class' => 'form-control' ]) }}
-		</div>
+			<div class="form-group">
+				{{ Form::label('name', 'Name') }}
+				{{ Form::text('name', null, [ 'class' => 'form-control', 'required' => true ]) }}
+			</div>
+
+			<div class="form-group">
+				{{ Form::label('email', 'Email Address') }}
+				{{ Form::text('email', null, [ 'class' => 'form-control', 'required' => true ]) }}
+			</div>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Documents</legend>
+
+			<div class="form-group">
+				{{ Form::label('cover_letter', 'Cover Letter') }}
+				{{ Form::file('cover_letter') }}
+			</div>
+
+			<div class="form-group">
+				{{ Form::label('resume', 'Resume') }}
+				{{ Form::file('resume') }}
+			</div>
+
+		</fieldset>
 
 		{{ Form::submit('Send', [ 'class' => 'btn btn-lg btn-primary btn-block' ]) }}
 

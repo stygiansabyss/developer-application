@@ -56,4 +56,6 @@ return array(
 
 	),
 
+	'submit-domain' => 'http://localhost:4567'
+
 );

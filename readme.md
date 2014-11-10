@@ -11,22 +11,22 @@ Past the website, the job description becomes much more flexible - we are lookin
 
 # Skills & Requirements
 
-•	Strong experience with PHP and large MVC patterns. 
-•	Strong understanding of SOLID (objected-oriented design).
-•	Experience working within a git-driven environment. 
-•	The right attitude is a must; Willingness to take on and find the right solution to any problem. 
-•	Able to take instruction and follow a set development standard. 
-•	Able to manage one’s own schedule to meet deadlines. 
+- Strong experience with PHP and large MVC patterns. 
+- Strong understanding of SOLID (objected-oriented design).
+- Experience working within a git-driven environment. 
+- The right attitude is a must; Willingness to take on and find the right solution to any problem. 
+- Able to take instruction and follow a set development standard. 
+- Able to manage one’s own schedule to meet deadlines. 
 
 ## Bonus
 
-•	Having an amazing GitHub profile and/or being involved in Open-Source software. 
-•	Familiarity with development frameworks, specifically Laravel.
-•	Familiarity with modern Javascript (CommonJs modules, Node, FP). 
-•	Familiarity with vagrant.
-•	Familiarity with other languages such as Ruby, Perl or Python. 
-•	Familiarity with mobile or console development.
-•	Familiarity with unit-testing and continuous integration.
+- Having an amazing GitHub profile and/or being involved in Open-Source software. 
+- Familiarity with development frameworks, specifically Laravel.
+- Familiarity with modern Javascript (CommonJs modules, Node, FP). 
+- Familiarity with vagrant.
+- Familiarity with other languages such as Ruby, Perl or Python. 
+- Familiarity with mobile or console development.
+- Familiarity with unit-testing and continuous integration.
 
 # About Rooster Teeth
 

@@ -4,12 +4,21 @@
 	<meta charset="UTF-8">
 	<title>RT Application Submission</title>
 	<link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+	<style>
+		.page-header h1 {
+			position: relative;
+		}
+		.page-header small {
+			position: absolute;
+			bottom: 4px;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
 
 		<div class="page-header">
-			<h1>Rooster Teeth <small>Developer Application</small></h1>
+			<h1><img src="/images/logo.png" alt="Logo"> <small>Developer Application</small></h1>
 		</div>
 	
 		@if (isset($info))

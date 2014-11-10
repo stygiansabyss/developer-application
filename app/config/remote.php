@@ -56,6 +56,6 @@ return array(
 
 	),
 
-	'submit-domain' => 'http://localhost:4567'
+	'submit-domain' => 'http://webdev.roosterteeth.com:4567'
 
 );

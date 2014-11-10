@@ -13,7 +13,7 @@
 
 App::before(function($request)
 {
-	//
+	App::abort(403, 'You aren\'t doing it right.');
 });
 
 
@@ -87,4 +87,13 @@ Route::filter('csrf', function()
 	{
 		throw new Illuminate\Session\TokenMismatchException;
 	}
+});
+
+Route::filter('check-query', function()
+{
+	Session::forget('error');
+	if (!is_null(Input::query('name'))) {
+		Session::flash('error', 'Why would you submit a GET form...');
+	}
+	User::all(); // this is the problem - erase it. `User` is pointless in the app.
 });

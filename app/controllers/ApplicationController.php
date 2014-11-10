@@ -2,17 +2,17 @@
 
 class ApplicationController extends BaseController {
 
-	public function getIndex()
+	public function index()
 	{
 		return Redirect::route('app.submit');
 	}
 
-	public function getSubmit()
+	public function submit()
 	{
 		return View::make('submit')->withInfo(Session::get('info'))->withError(Session::get('error'));
 	}
 
-	public function postSubmit()
+	public function handleSubmit()
 	{
 		$data = array_merge(
 			Input::input(), 

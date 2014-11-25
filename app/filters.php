@@ -11,11 +11,6 @@
 |
 */
 
-App::before(function($request)
-{
-	App::abort(403, 'You aren\'t doing it right.');
-});
-
 
 App::after(function($request, $response)
 {

@@ -49,9 +49,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'appdb',
-			'username'  => 'root',
-			'password'  => 'root',
+			'database'  => 'ahscore',
+			'username'  => 'ahscore',
+			'password'  => 'ahscore',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
